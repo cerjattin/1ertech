@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Contacto</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-image: url("/images/contact.jpg"); /* Cambia 'tu-imagen.jpg' por la ruta de tu imagen */
+        height: 340px;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: right;
+      }
+      .form-container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+      }
+      .botton-container {
+        display: flex;
+        justify-content: center;
+      }
+      label {
+        display: block;
+        margin: 10px 0 5px;
+      }
+      input,
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      button {
+        align-self: center;
+        align-items: center;
+        padding: 10px 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Escribenos</h1>
+    </header>
+    <div class="form-container">
+      <form action="#" method="post">
+        <label for="nombres">Nombres:</label>
+        <input
+          type="text"
+          id="nombres"
+          name="nombres"
+          required
+          minlength="2"
+          maxlength="50"
+          pattern="[A-Za-z\s]+"
+          title="Solo se permiten letras y espacios."
+        />
+
+        <label for="apellidos">Apellidos:</label>
+        <input
+          type="text"
+          id="apellidos"
+          name="apellidos"
+          required
+          minlength="2"
+          maxlength="50"
+          pattern="[A-Za-z\s]+"
+          title="Solo se permiten letras y espacios."
+        />
+
+        <label for="telefono">Teléfono:</label>
+        <input
+          type="tel"
+          id="telefono"
+          name="telefono"
+          required
+          pattern="[0-9]{10}"
+          title="Ingrese un número de teléfono válido de 10 dígitos."
+        />
+
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" required />
+
+        <label for="programa">Programa Académico:</label>
+        <select id="programa" name="programa" required>
+          <option value="">Seleccione un programa</option>
+          <option value="programa1">Programa 1</option>
+          <option value="programa2">Programa 2</option>
+          <option value="programa3">Programa 3</option>
+        </select>
+
+        <label>Jornada de Estudio:</label>
+        <input type="checkbox" id="jornada1" name="jornada" value="mañana" />
+        <label for="jornada1">Mañana</label>
+        <input type="checkbox" id="jornada2" name="jornada" value="tarde" />
+        <label for="jornada2">Tarde</label>
+        <input type="checkbox" id="jornada3" name="jornada" value="noche" />
+        <label for="jornada3">Noche</label>
+        <div class="botton-container">
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
